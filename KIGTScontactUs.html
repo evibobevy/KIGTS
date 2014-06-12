@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<head>
+	<!--Site Built By Evi Yeh CouchCodes.com-->
+	<title>KIG Technical Services</title>
+	<link href='http://fonts.googleapis.com/css?family=Marcellus+SC' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Ruda:400,900,700' rel='stylesheet' type='text/css'>
+	<meta name="viewpoint" content="width=device-width, initial-scale=1">
+
+</head>
+<style>
+#main /* 3/4 width */
+{
+	width: 75%;
+	height: auto;
+	margin:0;
+	margin-bottom:10px;
+	text-align:center;
+	display: block;
+	float: left;
+
+}
+#sidebar /* 1/4 width */
+{
+	width: 25%;
+	height: 1620px;
+	margin: 0;
+	text-align: left;
+	font-family: 'Marcellus SC', serif;
+	background: url("http://imgur.com/KgRSiQQ.jpg")repeat;
+	display:block;
+	float: left;
+}
+#wrap {
+	width:100%;
+	height:auto;
+	margin: 0;
+	display: block;
+}
+body {
+	margin: 0px;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+header {
+	margin:0;
+	width: 100%;
+	height: auto;
+	border:none;
+	padding: 0;
+}
+nav {
+	margin: -6px 0px 0px 0px;
+	border:none;
+	padding: 3px;
+	background: url("http://imgur.com/jQs3z6C.png")repeat;
+	height: auto;
+	line-height: 25px;
+	position: relative;
+}
+nav ul {
+	padding:0;
+	margin: 0;
+	margin-left: 40px;
+	margin-right: 5px;
+}
+ul a{
+	color: #D8D8D8;
+	font-family: 'Ruda', sans-serif;
+	font-weight: 100;
+	font-size: 14px;
+	line-height: 19px;
+	position: relative;
+	text-decoration: none;
+	display: inline;
+	margin-left: 20px;
+	margin-top: -30px;
+	padding: 4px;
+	text-indent: 20px;
+	text-shadow: 0px 0px 4px #777;
+}
+nav ul a:hover {
+	text-shadow: 0px 0px 10px #fff;
+	color: #D8D8D8;
+	font-family: 'Ruda', sans-serif;
+	font-weight: 100;
+	font-size: 14px;
+	line-height: 19px;
+	position: relative;
+	text-decoration: none;
+	display: inline;
+	margin-left: 20px;
+	margin-top: -30px;
+	padding: 4px;
+	text-indent: 20px;
+}
+a:hover {
+	font-size: 25px;
+}
+#h1 {
+	font-size: 3em;
+	font-family: 'Marcellus SC', serif;
+	color: #888;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: left;
+	text-indent: 20px;
+	position: relative;
+}
+.sidebar ul {
+	margin: 0 auto;
+}
+h3 {
+	font-size: 1.5em;
+	color: #222;
+	font-weight: 700;
+	margin: 20px;
+	border-bottom: 1px solid #222;
+	padding-bottom:10px;
+	position: relative;
+	text-align: center;
+}
+ul p a{
+	margin-left: 20px;
+	font-size: 1em;
+	font-family: 'Marcellus SC', serif;
+	color: #222;
+	position: relative;
+	line-height: 30px;
+	text-align: left;
+}
+span.contactInfo1 {
+	border: 9px solid #999;
+	opacity: 0.6;
+	width: 50%;
+	display: block;
+	padding:0px;
+	margin: 10px auto;
+	margin-left: 10px;
+	height: 275px;
+	float: left;
+	text-align: center;
+	line-height: 35px;
+}
+span.contactInfo1.clear{
+	clear: both;
+}
+span.image{
+	position: relative;
+	display: block;
+	max-height: 275px;
+	width: auto;
+	margin: 10px auto ;
+	margin-left: 10px;
+	float: left;
+	height: auto;
+	border: 9px solid #000;
+}
+span.image img {
+	width: auto;
+	height: 275px;
+}
+span.message {
+	width: 90%;
+	height: auto;
+	margin: 20px;
+	padding-bottom: 70px;
+	border-radius: 15px;
+	font-family: 'Marcellus SC', serif;
+	font-size: 28px;
+	text-align: center;
+	color:#999;
+	display: block;
+	float: left;
+	border: 9px solid #33CC33;
+	opacity: 0.5;
+}
+
+h1 strong {
+	font-size: .5em;
+	font-style: bold;
+	text-align: center;
+	margin:0px;
+}
+input {
+	border: 2px solid #66CC99;
+	width: 75%;
+	margin: 2px;
+	background: #F0F0F0;
+	padding: 2px;
+	font-size: 18px;
+	text-indent: 5px;
+	}
+input#button {
+	border: none;
+	font-size: 30px;
+	font-family: 'Marcellus SC', serif;
+	width: 75%;
+	margin: 5px;
+	color: #fff;
+	background: #999;
+}
+input#button:hover{
+	opacity: 0.8;
+}
+select {		
+	border: 2px solid #66CC99;
+	color: #999;
+	width: 75%;
+	margin: 5px;
+	height: 30px;
+	background: #F0F0F0;
+	padding: 6px;
+	}
+textarea {
+	border: 2px solid #66CC99;
+	width: 75%;
+	margin: 5px;
+	background: #F0F0F0;
+	padding: 6px;
+	border-radius: 10px;
+	color: #999;
+	font-size: 18px;
+
+}
+span.contactInfo3 {
+	width: 45%;
+	border: 9px solid #999;
+	opacity: 0.6;
+	display: block;
+	padding:0px;
+	margin:10px auto;
+	max-width: 50%;
+	float: left;
+	height: 275px;
+	text-align: center;
+	line-height: 75px;
+}
+span.contactInfo4 {
+	width: 45%;
+	border: 9px solid #999;
+	opacity: 0.6;
+	display: block;
+	padding:0px;
+	margin:10px auto;
+	margin-left: 10px;
+	float: left;
+	height: 275px;
+	text-align: center;
+	line-height: 75px;
+}*/	
+.inline {
+	width: 100%;
+	height:250px;
+	margin: 10px;
+}
+
+footer.clear
+	{
+	clear:both;
+}
+footer {
+	width: 100%;
+	height: auto;
+	border:none;
+	text-align: center;
+	padding-top: 3px;
+	float:left;
+	height: 40px;
+	margin: 0;
+	background: url("http://imgur.com/jQs3z6C.png")repeat;
+}
+footer a {
+	font-size: 14px;
+	color:#fff;
+	font-family: 'Ruda', sans-serif;
+	font-weight: 100;
+	line-height: 19px;
+	padding: 10px;
+	text-decoration: none;
+	height: 25px;
+	width: 100%;
+}
+footer a:hover {
+	text-shadow: 0px 0px 10px #fff;
+	font-size: 14px;
+}
+
+
+/* Everything before the media queries gets
+applied to screen sizes greater than 960 pixels */
+ 
+/*****************/
+/* MEDIA QUERIES */
+/*****************/
+ 
+/* Tablet Screen Sizes */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+#wrap {
+	min-width:767px;
+}
+#sidebar {
+	min-width: 190px;
+	height: 2200px;
+}
+#main {
+	min-width: 577px;
+}
+span.image{
+	position: relative;
+	display: block;
+	max-height: 275px;
+	width: auto;
+	margin: 0px auto ;
+	float: left;
+	height: auto;
+	border: 9px solid #000;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+span.image img {
+	width: auto;
+	height: 275px;
+}
+span.contactInfo1 {
+	min-width: 560px;
+	margin-top: 10px;
+}
+span.message {
+	min-width: 530px;
+	margin-left: 10px;
+}
+span.contactInfo3 {
+	min-width: 560px;
+	margin-left:10px;
+}
+span.contactInfo4 {
+	min-width: 560px;
+	margin-left: 10px;
+}
+}
+ 
+/* Mobile Landscape Screen Sizes */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+#wrap {
+	min-width: 480px;
+}
+#sidebar {
+	min-width: 480px;
+	height: 400px;
+}
+#main {
+	min-width: 480px;
+}
+#h1 {
+	text-indent: 95px;
+	border-bottom: 1px solid;
+	padding-bottom: 5px;
+}
+span.image {
+	margin: 10px 0px 0px 75px;
+}
+span.contactInfo1 {
+	min-width: 410px;
+	margin-top: 10px;
+	margin-left: 30px;
+}
+span.message {
+	min-width: 450px;
+	margin-left: 10px;
+}
+span.contactInfo3 {
+	min-width: 410px;
+	margin-left: 30px;
+}
+span.contactInfo4 {
+	min-width: 410px;
+	margin-left: 30px;
+}
+}
+/* Mobile Portrait Screen Sizes */
+@media only screen and (max-width: 479px) {
+#wrap {
+	min-width: 360px;
+}
+nav ul a{
+	margin-top: 5px;
+	margin-left:10px;
+	font-size: 24px;
+	display: inline-table;
+}
+#sidebar {
+	min-width: 360px;
+	height: 600px;
+}
+#main {
+	min-width: 360px;
+}
+#h1 {
+	text-indent: 30px;
+	border-bottom: 1px solid;
+	padding-bottom: 5px;
+}
+span.image {
+	margin: 10px 0px 0px 10px;
+}
+span.contactInfo1 {
+	min-width: 320px;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: -5px;
+}
+span.message {
+	min-width: 320px;
+	margin-left: 10px;
+}
+span.contactInfo3 {
+	min-width: 320px;
+	margin-left:10px;
+	margin-top: -5px;
+}
+span.contactInfo4 {
+	min-width: 320px;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+}
+</style>
+
+<body>
+	<div id="wrap">
+	<header><a href="index.html"><img src="Images/header.png" margin="0" width="100%" height="auto"></a>
+		<nav>
+		<ul>	
+			<a href="index.html">Home</a>
+			<a href="KIGTSaboutUs.html">About Us</a>
+			<a href="KIGTSproducts.html">Products</a>
+			<a href="KIGTSservices.html">Services</a>
+			<a href="KIGTSmgmntTeam.html">Management Team</a>
+			<a href="KIGTScontactUs.html">Contact</a>
+		</ul>
+		</nav>	
+		</header>
+	</div>	
+	</nav>
+
+	<div id ="sidebar">
+		<br></br>
+			<h3>LOCATIONS</h3>
+			<ul>
+				<p><a href="#">+ Location</a></p>
+				<p><a href="#">+ Location</a></p>
+				<p><a href="#">+ Location</a></p>
+				<p><a href="#">+ Location</a></p>
+				<p><a href="#">+ Location</a></p>
+			</ul></div>
+		
+	<div id="main">
+			<div id="h1">CONTACT US</div>
+			<span class="image"><img src="Images/img_placehold.jpg"></span>
+			<span class="contactInfo1" width="50%">
+				<h2>Address</h2>
+				<h2>Phone Number</h2>
+				<h2>Email 1</h2>
+				<h2>Email 2</h2></span>
+	<form action="contactUs.asp">	
+		<span class="message" width="100%">
+		<h1><strong>Message Us</strong></h1>
+		  <p><input type="text" name="first" placeholder="FIRST NAME"></p>
+		  <p><input type="text" name="last" placeholder="LAST NAME"></p>
+		  <p><input type="text" name="email" placeholder="EMAIL"></p>
+
+		<p><textarea id="comments" rows="5" cols="30" placeholder="MESSAGE"></textarea></p>
+		</br>
+		  <input type="submit" value="Submit" id="button"></span>
+		</form>
+
+		<span class="contactInfo3">
+		<h2>General Inquiries</h2></span>
+		<span class="contactInfo4">
+		<h2>Business Inquiries</h2></span>
+	</div>
+</div>		
+</body>
+<div>
+	<footer>	
+			<a href="index.html">Home</a><a>|</a>
+			<a href="KIGTSaboutUs.html">About Us</a><a>|</a>
+			<a href="KIGTSproducts.html">Products</a><a>|</a>
+			<a href="KIGTSservices.html">Services</a><a>|</a>
+			<a href="KIGTSmgmntTeam.html">Management Team</a><a>|</a>
+			<a href="KIGTScontactUs.html">Contact</a>
+		</ul>	
+	</footer></div>
+</div>
+
+</html>

@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>KIG Technical Services</title>
+	<link href='http://fonts.googleapis.com/css?family=Marcellus+SC' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Exo+2:400,200,700,900' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Ruda:400,900,700' rel='stylesheet' type='text/css'>
+</head>
+<style>
+
+body {
+	margin: 0px;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+header {
+	margin:0;
+	width: 100%;
+	height: auto;
+	border:none;
+	padding: 0;
+}
+nav {
+	margin: -6px 0px -9px 0px;
+	border:none;
+	padding: 3px;
+	background: url("http://imgur.com/jQs3z6C.png")repeat;
+	height: auto;
+	line-height: 25px;
+	position: relative;
+}
+nav ul {
+	padding:0;
+	margin-bottom: 0px;
+	margin: 0;
+	margin-left: 40px;
+	margin-right: 5px;
+}
+ul a{
+	color: #D8D8D8;
+	font-family: 'Ruda', sans-serif;
+	font-weight: 100;
+	font-size: 14px;
+	line-height: 19px;
+	position: relative;
+	text-decoration: none;
+	display: inline;
+	margin-left: 20px;
+	margin-top: -30px;
+	padding: 4px;
+	text-indent: 20px;
+	text-shadow: 0px 0px 4px #777;
+}
+a:hover {
+	font-size: 16px;
+}
+.slides {
+    padding: 0;
+    width: 100%;
+    height: 430px;
+    display: block;
+    margin: 10px auto;
+    position: relative;
+    background: white;
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.slides input { display: none; }
+
+.slide-container { display: block; }
+
+.slide {
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    height: 420px;
+    display: block;
+    position: absolute;
+
+    transform: scale(0);
+
+    transition: all .7s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav label {
+    width: 75px;
+    height: 100%;
+    display: none;
+    position: absolute;
+
+	  opacity: 0;
+    z-index: 9;
+    cursor: pointer;
+
+    transition: opacity .2s;
+
+    color: #FFF;
+    font-size: 156pt;
+    text-align: center;
+    line-height: 380px;
+    font-family: "Varela Round", sans-serif;
+    background-color: rgba(255, 255, 255, .3);
+    text-shadow: 0px 0px 15px rgb(119, 119, 119);
+}
+
+.slide:hover + .nav label { opacity: 0.5; }
+
+.nav label:hover { opacity: 1; }
+
+.nav .next { right: 0; }
+
+input:checked + .slide-container  .slide {
+    opacity: 1;
+
+    transform: scale(1);
+
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .nav label { display: block; }
+/*
+.nav-dots {
+	width: 100%;
+	bottom: 9px;
+	height: 11px;
+	display: block;
+	position: absolute;
+	text-align: center;
+}
+
+.nav-dots .nav-dot {
+	top: -5px;
+	width: 11px;
+	height: 11px;
+	margin: 0 4px;
+	position: relative;
+	border-radius: 100%;
+	display: inline-block;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+*/
+.nav-dots .nav-dot:hover {
+	cursor: pointer;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+input#img-1:checked ~ .nav-dots label#img-dot-1,
+input#img-2:checked ~ .nav-dots label#img-dot-2,
+input#img-3:checked ~ .nav-dots label#img-dot-3,
+input#img-4:checked ~ .nav-dots label#img-dot-4,
+input#img-5:checked ~ .nav-dots label#img-dot-5,
+input#img-6:checked ~ .nav-dots label#img-dot-6 {
+	background: rgba(0, 0, 0, 0.8);
+}
+ul div.clear {
+	clear: both;
+}
+
+.heading1 {
+	max-width: 30%;
+	height: auto;
+	display:block;
+	float:left;
+	margin: 10px;
+	margin-left: 40px;		
+}
+.heading2 {
+	max-width: 30%;
+	height: auto;
+	display: block;
+	float: left;
+	margin:10px;
+}
+.heading3 {
+	max-width: 30%;
+	height: auto;
+	display: block;
+	float: left;
+	margin:10px;
+}
+
+h2 {
+	text-align: center;
+	font-family: 'Exo 2', sans-serif;
+	font-weight: 700;
+	color: #999;
+}
+p {
+	text-indent: 10px;
+	font-family: 'Exo 2', sans-serif;
+	font-weight: 200;
+}
+footer.clear
+	{
+	clear:both;
+}
+footer {
+	width: 100%;
+	height: auto;
+	border:none;
+	text-align: center;
+	padding-top: 3px;
+	float:left;
+	height: 40px;
+	margin: 0;
+	background: url("http://imgur.com/jQs3z6C.png")repeat;
+}
+footer a {
+	font-size: 14px;
+	color:#999;
+	font-family: 'Marcellus SC', serif;
+	font-weight: 100;
+	line-height: 19px;
+	padding: 10px;
+	text-decoration: none;
+	height: 25px;
+	width: 100%;
+}
+footer a:hover {
+	font-size: 14px;
+}
+.clear {
+	clear:both;
+}
+#wrap {
+	width:100%;
+	height:auto;
+	margin: 0;
+	display: block;
+}
+/* Everything before the media queries gets
+applied to screen sizes greater than 960 pixels */
+ 
+/*****************/
+/* MEDIA QUERIES */
+/*****************/
+ 
+/* Tablet Screen Sizes */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+#wrap {
+	min-width:767px;
+}
+nav ul a{
+	text-indent:10px;
+	font-size: 14px;
+}
+.slides {
+	min-width: 100%;
+	height: 400px;
+	display: block;
+	float: left;
+}
+.slide img {
+	min-width: 100%;
+	height: 400px;
+	display: block;
+	float: left;	
+}
+.nav label {
+	line-height: 370px;
+	width: 10%;
+	font-size: 120px;
+	float: none;
+	position: absolute;
+}
+.heading1 {
+	max-width: 30%;
+	height: auto;
+	display:block;
+	float:left;
+	margin: 10px;
+	margin-top: 10px;
+	margin-left: 20px;	
+}
+.heading2 {
+	max-width: 30%;
+	height: auto;
+	display: block;
+	float: left;
+	margin:10px;
+}
+.heading3 {
+	max-width: 30%;
+	height: auto;
+	display: block;
+	float: left;
+	margin:10px;
+}
+}
+ 
+/* Mobile Landscape Screen Sizes */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+#wrap {
+	min-width: 480px;
+}
+nav ul a{
+	margin-left:24px;
+	width: 100%;
+	font-size: 14px;
+}
+.slides {
+	min-width: 100%;
+	height: 300px;
+	display: block;
+	float: left;
+}
+.slide img {
+	min-width: 100%;
+	height: 300px;
+	display: block;
+	float: left;	
+}
+.nav label {
+	line-height: 280px;
+	width: 10%;
+	font-size: 100px;
+	float: none;
+	position: absolute;
+}
+.heading1 {
+	max-width: 100%;
+	height: auto;
+	display:block;
+	float:left;
+	margin: 20px;
+}
+.heading2 {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	float: left;
+	margin:20px;
+}
+.heading3 {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	float: left;
+	margin:20px;
+}
+}
+/* Mobile Portrait Screen Sizes */
+@media only screen and (max-width: 479px) {
+#wrap {
+	min-width: 360px;
+}
+nav ul a{
+	margin-top: 5px;
+	margin-left:10px;
+	font-size: 14px;
+	display: inline-table;
+}
+.slides {
+	min-width: 100%;
+	height: 200px;
+	display: block;
+	float: left;
+}
+.slide img {
+	min-width: 100%;
+	height: 200px;
+	display: block;
+	float: left;	
+}
+.nav label {
+	line-height: 180px;
+	width: 10%;
+	font-size: 80px;
+	float: none;
+	position: absolute;
+}
+.heading1 {
+	max-width: 100%;
+	height: auto;
+	display:block;
+	float:left;
+	margin: 20px;
+	margin-top: 10px;	
+}
+.heading2 {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	float: left;
+	margin:20px;
+}
+.heading3 {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	float: left;
+	margin:20px;
+}
+}
+}
+</style>
+<body>
+	<div id="wrap">
+	<header><a href="KIGTShome.html"><img src="/Users/evi/Desktop/KAZI INVESTMENTS/CODES/HTML/INDEX/Images/FINAL.tiff" margin="0" width="100%" height="auto"></header>
+		<nav>
+		<ul>	
+			<a href="KIGTShome.html">Home</a>
+			<a href="KIGTSaboutUs.html">About Us</a>
+			<a href="KIGTSproducts.html">Products</a>
+			<a href="KIGTSservices.html">Services</a>
+			<a href="KIGTSmgmntTeam.html">Management Team</a>
+			<a href="KIGTScontactUs.html">Contact</a>
+		</ul>
+		</nav>	
+	</div>	
+<!--Image SLider-->		
+	<ul class="slides">
+    <input type="radio" name="radio-btn" id="img-1" checked />
+    <li class="slide-container">
+		<div class="slide">
+			<img src="http://farm9.staticflickr.com/8072/8346734966_f9cd7d0941_z.jpg" />
+        </div>
+		<div class="nav">
+			<label for="img-6" class="prev">&#x2039;</label>
+			<label for="img-2" class="next">&#x203a;</label>
+		</div>
+    </li>
+
+    <input type="radio" name="radio-btn" id="img-2" />
+    <li class="slide-container">
+        <div class="slide">
+          <img src="http://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg" />
+        </div>
+		<div class="nav">
+			<label for="img-1" class="prev">&#x2039;</label>
+			<label for="img-3" class="next">&#x203a;</label>
+		</div>
+    </li>
+
+    <input type="radio" name="radio-btn" id="img-3" />
+    <li class="slide-container">
+        <div class="slide">
+          <img src="http://farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg" />
+        </div>
+		<div class="nav">
+			<label for="img-2" class="prev">&#x2039;</label>
+			<label for="img-4" class="next">&#x203a;</label>
+		</div>
+    </li>
+
+    <input type="radio" name="radio-btn" id="img-4" />
+    <li class="slide-container">
+        <div class="slide">
+          <img src="http://farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg" />
+        </div>
+		<div class="nav">
+			<label for="img-3" class="prev">&#x2039;</label>
+			<label for="img-5" class="next">&#x203a;</label>
+		</div>
+    </li>
+
+    <input type="radio" name="radio-btn" id="img-5" />
+    <li class="slide-container">
+        <div class="slide">
+          <img src="http://farm9.staticflickr.com/8055/8098750623_66292a35c0_z.jpg" />
+        </div>
+		<div class="nav">
+			<label for="img-4" class="prev">&#x2039;</label>
+			<label for="img-6" class="next">&#x203a;</label>
+		</div>
+    </li>
+
+    <input type="radio" name="radio-btn" id="img-6" />
+    <li class="slide-container">
+        <div class="slide">
+          <img src="http://farm9.staticflickr.com/8195/8098750703_797e102da2_z.jpg" />
+        </div>
+		<div class="nav">
+			<label for="img-5" class="prev">&#x2039;</label>
+			<label for="img-1" class="next">&#x203a;</label>
+		</div>
+    </li>
+
+    <li class="nav-dots">
+      <label for="img-1" class="nav-dot" id="img-dot-1"></label>
+      <label for="img-2" class="nav-dot" id="img-dot-2"></label>
+      <label for="img-3" class="nav-dot" id="img-dot-3"></label>
+      <label for="img-4" class="nav-dot" id="img-dot-4"></label>
+      <label for="img-5" class="nav-dot" id="img-dot-5"></label>
+      <label for="img-6" class="nav-dot" id="img-dot-6"></label>
+    </li>
+</ul>
+<!--end slider-->    
+
+   <div id="columns">
+	<div class="heading1">
+   	<h2>Aviation Services</h2>
+   	<p>Vice yr kale chips Echo Park. Keytar whatever umami blog roof party salvia, Marfa pug. Schlitz YOLO quinoa gastropub slow-carb twee, Odd Future mixtape fixie. Roof party bicycle rights selfies Etsy, ethnic fixie typewriter. Wayfarers fashion axe kogi, you probably haven't heard of them Thundercats gentrify Marfa tofu. Hashtag irony Neutra, chillwave Thundercats authentic kale chips cliche keffiyeh leggings hoodie pug. Godard chambray paleo gentrify Tonx, fingerstache photo booth locavore squid 8-bit sartorial meggings Blue Bottle cardigan.</p></div><clear></clear>
+	<div class="heading2">
+	<h2>Project Management</h2>
+	<p>Marfa sustainable 90's roof party gentrify, farm-to-table yr polaroid biodiesel pour-over master cleanse single-origin coffee pork belly literally. Sriracha vinyl food truck YOLO, locavore Godard slow-carb DIY drinking vinegar Intelligentsia. Cred meh kitsch, pork belly Pitchfork banh mi beard Godard Thundercats you probably haven't heard of them. Tofu Echo Park deep v bespoke Blue Bottle. Small batc chillwave, pickled try-hard street art photo booth fap. Fingerstache Williamsburg farm-to-table gluten-free fap. Cardigan direct trade fingerstache blog sartorial.</p></div><clear></clear>
+	<div class="heading3">
+	<h2>Maintenence and Support</h2>
+	<p>Chia you probably haven't heard of them narwhal umami. Keffiyeh stumptown Marfa, roof party kitsch food truck ethnic American Apparel gentrify Bushwick. Freegan selfies drinking vinegar, bicycle rights quinoa fap viral disrupt flannel Tonx VHS fixie megging farm-to-table. Post-ironic butcher ugh, forage squid Vice keffiyeh before they sold out synth banjo photo booth single-origin coffee salvia next level whatever. Organic irony Echo Park, synth literally disrupt scenester kitsch banh mi put a bird on it meggings chambray skateboard 90's.</p></div><clear></clear>
+</div>
+<div>
+	<footer>	
+			<a href="KIGTShome.html">Home</a><a>|</a>
+			<a href="KIGTSaboutUs.html">About Us</a><a>|</a>
+			<a href="KIGTSproducts.html">Products</a><a>|</a>
+			<a href="KIGTSservices.html">Services</a><a>|</a>
+			<a href="KIGTSmgmntTeam.html">Management Team</a><a>|</a>
+			<a href="KIGTScontactUs.html">Contact</a>
+		</ul>	
+	</footer>
+</div>
+</body>
+</div>
+<script>
+
+</html>
